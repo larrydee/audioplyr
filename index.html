@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+
+<body>
+  <h1>Audio Player Example</h1>
+  <div id="audio-player-container"></div>
+  <div id="btn-audio-play1" class="btn-audio-play">Crickets Mp3</div>
+  <div id="btn-audio-play2" class="btn-audio-play">Crickets Oga</div>
+  <div id="btn-audio-play3" class="btn-audio-play">Birds Mp3</div>
+  <div id="btn-audio-play4" class="btn-audio-play">Birds Oga</div>
+
+  <script type="text/javascript" src="js/AudioPlyr.js"></script>
+  <script type="text/javascript">
+    console.log("start: ");
+    var plyOptions = {
+      title: "An Audio Player"
+    };
+    AudioPlyr.init("audio-player-container", plyOptions);
+    
+    var btnAudioPlay1 = document.getElementById('btn-audio-play1');
+    btnAudioPlay1.addEventListener('click', function(e) {
+      AudioPlyr.updateAudioSource({title: "Crickets MP3", mediaFile: "media/crickets.mp3"}, true);
+    });
+    var btnAudioPlay2 = document.getElementById('btn-audio-play2');
+    btnAudioPlay2.addEventListener('click', function(e) {
+      AudioPlyr.updateAudioSource({title: "Crickets OGA", mediaFile: "media/crickets.oga"}, true);
+    });
+    var btnAudioPlay3 = document.getElementById('btn-audio-play3');
+    btnAudioPlay3.addEventListener('click', function(e) {
+      AudioPlyr.updateAudioSource({title: "Birds MP3", mediaFile: "media/birds.mp3"}, true);
+    });
+    var btnAudioPlay4 = document.getElementById('btn-audio-play4');
+    btnAudioPlay4.addEventListener('click', function(e) {
+      AudioPlyr.updateAudioSource({title: "Birds OGA", mediaFile: "media/birds.oga"}, true);
+    });
+  </script>
+</body>
+  
+
+
+</html>
