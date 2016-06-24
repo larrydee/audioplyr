@@ -1,0 +1,12 @@
+html, body {
+  font-family: Helvetica, sans-serif;
+}
+
+.btn-audio-play {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+}
