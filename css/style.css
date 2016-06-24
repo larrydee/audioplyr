@@ -2,6 +2,12 @@ html, body {
   font-family: Helvetica, sans-serif;
 }
 
+#main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .btn-audio-play {
   display: inline-block;
   padding: 10px 30px;
@@ -9,4 +15,28 @@ html, body {
   background-color: #555;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.sound-list {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px;
+  background: #eee;
+}
+.sound-list ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+.sound-list ul li {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* custom styles */
+.player-title {
+  margin-bottom: 50px;
 }

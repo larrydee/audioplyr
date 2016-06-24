@@ -29,7 +29,7 @@ var AudioPlyr = (function () {
     plyrContainer.className = "player-container";
     var plyrTitle = document.createElement('div');
     plyrTitle.className = "player-title";
-    plyrTitle.innerHTML = plyrTitleText;
+    //plyrTitle.innerHTML = plyrTitleText;
     plyrContainer.appendChild(plyrTitle);
     var plyrFrame = document.createElement('div');
     plyrFrame.className = "player-frame";
@@ -56,6 +56,12 @@ var AudioPlyr = (function () {
     playerBoxUser.appendChild(plyrContainer);
   };
   
+  var _applyStyles = function() {
+    var plyrTitle = document.getElementsByClassName('player-title')[0];
+    plyrTitle.style.marginBottom = "10px";
+    plyrTitle.style.fontSize = "18px";
+  };
+  
   var _getExt = function(fileName) {	
     var pos1 = fileName.lastIndexOf('.');
     return fileName.substring(pos1 + 1, fileName.length);
@@ -68,8 +74,11 @@ var AudioPlyr = (function () {
     console.log("init INPUTS: conId=" + conId + " options=" + options);
     containerId = conId;
     opts = options || {};
-    _assignOptions();
+    //_assignOptions();
     _setupUi();
+    updateAudioSource(opts.soundItem, opts.autoPlay);
+    if (opts.styleName != "custom")
+      _applyStyles();
   };
 
   var updateAudioSource = function(soundItem, doPlay) {
