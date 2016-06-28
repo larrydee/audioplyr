@@ -52,6 +52,11 @@ var AudioPlyr = (function () {
     plyrAudioSrc.setAttribute('type', 'audio/ogg');
     plyrAudioSrc.setAttribute('src', '');
     plyrAudio.appendChild(plyrAudioSrc);
+    plyrAudioSrc = document.createElement('source');
+    plyrAudioSrc.setAttribute('id', 'src-audio-wav');
+    plyrAudioSrc.setAttribute('type', 'audio/wav');
+    plyrAudioSrc.setAttribute('src', '');
+    plyrAudio.appendChild(plyrAudioSrc);
     
     playerBoxUser.appendChild(plyrContainer);
   };
@@ -85,11 +90,17 @@ var AudioPlyr = (function () {
     console.log("updateAudioSource: title=" + soundItem.title + " mediaFile=" + soundItem.mediaFile);
     var sourceMp3 = document.getElementById('src-audio-mp3');
     var sourceOgg = document.getElementById('src-audio-ogg');
+    var sourceWav = document.getElementById('src-audio-wav');
+    sourceMp3.src = "";
+    sourceOgg.src = "";
+    sourceWav.src = "";
     var ext = _getExt(soundItem.mediaFile);
     if (ext == "mp3")
       sourceMp3.src = soundItem.mediaFile;
     if (ext == "ogg" || ext == "oga")
       sourceOgg.src = soundItem.mediaFile;
+    if (ext == "wav")
+      sourceWav.src = soundItem.mediaFile;
     plyrAudio.load();
     if (doPlay)
       plyrAudio.play();

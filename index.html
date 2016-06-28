@@ -14,14 +14,14 @@
         <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Crickets OGA", mediaFile: "media/crickets.oga"}, true);'>Crickets OGA</li>
         <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Birds MP3", mediaFile: "media/birds.mp3"}, true);'>Birds MP3</li>
         <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Birds OGA", mediaFile: "media/birds.oga"}, true);'>Birds OGA</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "WAV", mediaFile: "media/trail.wav"}, true);'>WAV</li>
       </ul>
     </div>
   </div>
   
   <script type="text/javascript" src="js/AudioPlyr.js"></script>
   <script type="text/javascript">
-    console.log("start: ");
-    var plyOptions = {
+    var plyrOptions = {
       styleName: "basic",
       autoPlay: true,
       soundItem: {
@@ -29,7 +29,7 @@
         mediaFile: "media/crickets.mp3"
       }
     };
-    AudioPlyr.init("audio-player-container", plyOptions);
+    AudioPlyr.init("audio-player-container", plyrOptions);
   </script>
 </body>
   
