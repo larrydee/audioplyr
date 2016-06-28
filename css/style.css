@@ -20,7 +20,7 @@ html, body {
 .sound-list {
   display: inline-block;
   margin-top: 14px;
-  padding: 10px;
+  padding: 10px 30px;
   background: #eee;
 }
 .sound-list ul {
