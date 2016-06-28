@@ -31,12 +31,15 @@ A simple HTML5 audio player using JavaScript.  The player can be easily dropped 
 
 #### Setup Example for Page
 In the page, add a DIV element with an ID for the player container:
+
   <div id="audio-player-container"></div>
  
 Include the AudioPlyr.js file:
+
   <script type="text/javascript" src="js/AudioPlyr.js"></script>
   
-Call init function with container ID and options:  
+Call init function with container ID and options:
+
   <script type="text/javascript">
     var plyrOptions = {
       styleName: "basic",
