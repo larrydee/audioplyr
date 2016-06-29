@@ -10,11 +10,12 @@
     <div id="audio-player-container"></div>
     <div class="sound-list">
       <ul>
-        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Crickets MP3", mediaFile: "media/crickets.mp3"}, true);'>Crickets MP3</li>
-        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Crickets OGA", mediaFile: "media/crickets.oga"}, true);'>Crickets OGA</li>
-        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Birds MP3", mediaFile: "media/birds.mp3"}, true);'>Birds MP3</li>
-        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Birds OGA", mediaFile: "media/birds.oga"}, true);'>Birds OGA</li>
-        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "WAV", mediaFile: "media/trail.wav"}, true);'>WAV</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Satellite MP3", mediaFile: "media/space_satellite.mp3"}, true);'>Satellite MP3</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Satellite OGA", mediaFile: "media/space_satellite.oga"}, true);'>Satellite OGA</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Satellite WAV", mediaFile: "media/space_satellite.wav"}, true);'>Satellite WAV</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Transmit MP3", mediaFile: "media/space_transmit.mp3"}, true);'>Transmit MP3</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Transmit OGA", mediaFile: "media/space_transmit.oga"}, true);'>Transmit OGA</li>
+        <li onclick='javascript:AudioPlyr.updateAudioSource({title: "Transmit WAV", mediaFile: "media/space_transmit.wav"}, true);'>Transmit WAV</li>
       </ul>
     </div>
   </div>
@@ -25,8 +26,8 @@
       styleName: "basic",
       autoPlay: true,
       soundItem: {
-        title: "Crickets MP3",
-        mediaFile: "media/crickets.mp3"
+        title: "Satellite MP3",
+        mediaFile: "media/space_satellite.mp3"
       }
     };
     AudioPlyr.init("audio-player-container", plyrOptions);
